@@ -280,6 +280,17 @@ ul {
   display: flex;
   color: var(--text-black-900);
   background: #111111;
+  opacity: 0;
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .home .home-info {
