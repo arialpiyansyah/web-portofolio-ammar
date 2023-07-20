@@ -54,6 +54,8 @@ function addBackSection(num) {
   allSection[num].classList.add("back-section");
 }
 
+
+
 function updateNav(element) {
   for (let i = 0; i < totalNavList; i++) {
     navList[i].querySelector("a").classList.remove("active");
@@ -97,4 +99,28 @@ function submitForm() {
   document.getElementById("message").value = "";
 }
 
+// Download CV
+function downloadCV() {
+  var downloadLink = document.getElementById("downloadLink");
+  var downloadUrl = downloadLink.getAttribute("href");
+  var fileName = downloadUrl.split('/').pop(); // Ambil nama file dari URL
 
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', downloadUrl, true);
+  xhr.responseType = 'blob';
+
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+          // Buat elemen anchor untuk memulai unduhan
+          var a = document.createElement('a');
+          a.href = window.URL.createObjectURL(xhr.response);
+          a.download = fileName;
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(a.href);
+      }
+  };
+
+  xhr.send();
+}

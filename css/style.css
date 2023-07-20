@@ -539,7 +539,10 @@ h3.my-proffession {
   line-height: 40px;
 }
 
-.about .about-content .education {
+.about .about-content .education,
+.about .about-content .certificates {
+  flex: 0 0 50%;
+  max-width: 50%;
   margin-top: 30px;
   align-items: center;
   justify-content: center;
@@ -618,6 +621,15 @@ h3.my-proffession {
 
 .about .about-content .timeline .timeline-item p {
   color: var(--bg-black-100);
+}
+
+.about .about-content .timeline .timeline-item p a {
+  color: var(--bg-black-100);
+  font-style: italic;
+}
+
+.about .about-content .timeline .timeline-item p a:hover {
+  text-decoration: underline;
 }
 
 .about .about-content .timeline .timeline-text {
@@ -763,6 +775,27 @@ h3.my-proffession {
   text-align: center;
 }
 
+.img-link {
+  display: flex;
+  margin-left: 3px;
+}
+
+
+.img-link a {
+  background: transparent;
+  border: 1px solid var(--skin-color);
+  color: var(--skin-color);
+  padding: 8px 16px;
+  border-radius: 4px; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease; 
+}
+
+.img-link a:hover {
+  background-color: var(--bg-black-900);
+  color: var(--skin-color);
+}
+
 
 /* Contact CSS */
 
@@ -859,64 +892,69 @@ form .row .contact-form .btn {
   cursor: pointer;
 }
 
-
 /* Media Query for Responsive */
 
 @media (max-width: 1199px) {
   .section .container {
-  padding-top: 70px;
+    padding-top: 70px;
   }
   .aside {
-  left: -270px;
+    left: -270px;
   }
-  
+
   .aside.open {
-  left: 0;
+    left: 0;
   }
   .aside .nav-toggler {
-  display: flex;
-  left: 30px;
+    display: flex;
+    left: 30px;
   }
-  
+
   .section {
-  left: 0;
+    left: 0;
   }
   .about .about-content .personal-info .info-item p span {
-  display: block;
-  margin-left: 0;
+    display: block;
+    margin-left: 0;
   }
-  }
-  
-  @media (max-width: 991px) {
+}
+
+@media (max-width: 991px) {
   .contact .contact-info-item,
   .projects .projects-item,
   .service .service-item {
-  flex: 0 0 50%;
-  max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
-  
+
   .about .about-content .education,
+  .about .about-content .certificates,
   .home .home-info {
-  flex: 0 0 100%;
-  max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  
-  .home .home-img {
-  display: none;
+
+  .home-info {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
+
+  .home-img {
+    display: none;
   }
-  
-  @media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
   .contact .contact-form .col-6,
   .projects .projects-item,
   .contact .contact-info-item,
   .service .service-item,
   .about .about-content .education,
+  .about .about-content .certificates,
   .about .about-content .skills,
   .about .about-content .personal-info {
-  flex: 0 0 100%;
-  max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  }
-
-  
+}
