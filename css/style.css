@@ -624,7 +624,7 @@ h3.my-proffession {
 }
 
 .about .about-content .timeline .timeline-item p a {
-  color: var(--bg-black-100);
+  color: var(--skin-color);
   font-style: italic;
 }
 
