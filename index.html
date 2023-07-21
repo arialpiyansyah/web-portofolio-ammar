@@ -29,6 +29,11 @@
     <link rel="stylesheet" href="css/style-switcher.css" />
   </head>
   <body>
+    <!-- Loader Start -->
+    <div class="loader" id="loadingScreen">
+      <div></div>
+    </div>
+    <!-- Loader End -->
     <!-- Main Container Start-->
     <div class="main-container">
       <!-- Aside Start -->
@@ -72,7 +77,7 @@
                   <a href="https://github.com/ahmadammarm" target="_blank"><i class="fa-brands fa-github"></i></a>
                   <a href="https://instagram.com/ahmadammrm?igshid=ZDdkNTZiNTM=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                   <a href="https://www.linkedin.com/in/ahmad-ammar-98a87a254/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              </div>
+                </div>
                 <a id="downloadLink" href="assets/CV-Ahmad-Ammar.pdf" class="btn" onclick="downloadCV()">Download CV</a>
               </div>
               <div class="home-img padd-15">
@@ -448,6 +453,34 @@
             alert("Terjadi kesalahan saat mengirim pesan");
           });
       });
+
+      // Fungsi untuk menghilangkan loading setelah 2 detik
+      function hideLoadingScreen() {
+        const loadingScreen = document.querySelector(".loading-screen");
+        loadingScreen.style.display = "none";
+      }
+
+      function hideLoadingScreenAndShowHome() {
+    const loadingScreen = document.getElementById("loadingScreen");
+    const mainContainer = document.querySelector(".main-container");
+
+    // Menghilangkan loading screen
+    loadingScreen.style.display = "none";
+
+    // Menampilkan bagian Home dengan menghapus class "active" dari bagian lain
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section) => section.classList.remove("active"));
+    document.getElementById("home").classList.add("active");
+
+    // Mengaktifkan konten utama
+    mainContainer.style.display = "block";
+  }
+
+  // Menunggu konten website selesai dimuat
+  window.addEventListener("load", function () {
+    // Setelah 2 detik, panggil fungsi hideLoadingScreenAndShowHome untuk menghilangkan loading dan menampilkan bagian Home
+    setTimeout(hideLoadingScreenAndShowHome, 3000);
+  });
     </script>
   </body>
 </html>
