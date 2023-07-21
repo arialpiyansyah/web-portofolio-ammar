@@ -457,8 +457,9 @@ h3.my-proffession {
 
 .about-img img {
   width: 200px;
-  height: auto; 
+  height: auto;
   display: none;
+  margin: auto; /* Menengahkan gambar secara horizontal */
 }
 
 .about .about-content .about-text p {
@@ -945,7 +946,6 @@ form .row .contact-form .btn {
   }
 }
 
-
 /* Media Query for Responsive */
 
 @media (max-width: 1199px) {
@@ -997,7 +997,6 @@ form .row .contact-form .btn {
   .home-img {
     display: none;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -1005,7 +1004,7 @@ form .row .contact-form .btn {
   .projects .projects-item,
   .contact .contact-info-item,
   .service .service-item,
-  .about-img img,
+  .about-img,
   .about .about-content .education,
   .about .about-content .certificates,
   .about .about-content .skills,
@@ -1022,8 +1021,7 @@ form .row .contact-form .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     margin-bottom: 3rem;
-    margin-left: 7rem;
+    border-radius: 10px;
   }
 }
