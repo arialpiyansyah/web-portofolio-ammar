@@ -455,6 +455,12 @@ h3.my-proffession {
   color: var(--skin-color);
 }
 
+.about-img img {
+  width: 200px;
+  height: auto; 
+  display: none;
+}
+
 .about .about-content .about-text p {
   font-size: 16px;
   line-height: 25px;
@@ -590,7 +596,7 @@ h3.my-proffession {
 .about .about-content .timeline .timeline-item {
   position: relative;
   padding-left: 37px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
 }
 
 .about .about-content .timeline .timeline-item:last-child {
@@ -629,7 +635,7 @@ h3.my-proffession {
 }
 
 .about .about-content .timeline .timeline-title {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: capitalize;
@@ -939,6 +945,7 @@ form .row .contact-form .btn {
   }
 }
 
+
 /* Media Query for Responsive */
 
 @media (max-width: 1199px) {
@@ -990,6 +997,7 @@ form .row .contact-form .btn {
   .home-img {
     display: none;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -997,6 +1005,7 @@ form .row .contact-form .btn {
   .projects .projects-item,
   .contact .contact-info-item,
   .service .service-item,
+  .about-img img,
   .about .about-content .education,
   .about .about-content .certificates,
   .about .about-content .skills,
@@ -1008,5 +1017,13 @@ form .row .contact-form .btn {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .about-img img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    margin-left: 7rem;
   }
 }
