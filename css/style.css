@@ -322,7 +322,7 @@ h3.my-proffession {
 }
 
 .home-info p {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   font-size: 20px;
   color: var(--bg-black-900);
 }
@@ -371,6 +371,23 @@ h3.my-proffession {
   margin: auto;
   border-radius: 10px;
   height: 350px;
+}
+
+/* Mengatur tampilan Social Links */
+.socmed-links {
+  display: flex;
+}
+
+.socmed-links a {
+  font-size: 25px;
+  margin: 15px;
+  color: var(--skin-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socmed-links a:hover {
+  transform: translateY(-5px); /* Menggeser link naik 5 piksel saat dihover */
 }
 
 /* About CSS */
@@ -778,24 +795,23 @@ h3.my-proffession {
 .img-link {
   display: flex;
   margin-left: 3px;
+  margin-top: 5px;
 }
-
 
 .img-link a {
   background: transparent;
   border: 1px solid var(--skin-color);
   color: var(--skin-color);
   padding: 8px 16px;
-  border-radius: 4px; 
-  text-decoration: none; 
-  transition: background-color 0.3s ease; 
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.img-link a:hover {
+.img-link a:active {
   background-color: var(--bg-black-900);
   color: var(--skin-color);
 }
-
 
 /* Contact CSS */
 
@@ -956,5 +972,10 @@ form .row .contact-form .btn {
   .about .about-content .personal-info {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .socmed-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
