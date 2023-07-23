@@ -274,7 +274,6 @@ ul {
   margin-right: 15px;
 }
 
-
 /* Home CSS */
 
 .home {
@@ -756,6 +755,7 @@ h3.my-proffession {
   flex: 0 0 50%;
   max-width: 50%;
   margin-bottom: 30px;
+  perspective: 1000px;
 }
 
 .projects .projects-item-inner {
@@ -763,6 +763,17 @@ h3.my-proffession {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.projects-item:hover .projects-item-inner {
+  transform: rotateY(180deg);
+}
+
+.projects-img,
+.flip-card-back {
+  backface-visibility: hidden;
 }
 
 .projects .projects-item-inner .projects-img img {
@@ -772,6 +783,72 @@ h3.my-proffession {
 
 .projects-img {
   position: relative;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+  transform: scaleX(-1);
+}
+
+.card-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  transform: scaleX(-1);
+}
+
+.card-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  transform: scaleX(-1);
+}
+
+/* Tambahan untuk mengatur overlay */
+.projects-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* Menghilangkan transformasi rotateY pada awalnya */
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+  /* Menambahkan aturan ini untuk menghindari terbaliknya teks */
+  transform-style: preserve-3d;
+  /* Menyembunyikan teks saat belum dihover */
+  opacity: 0;
+  /* Menambahkan z-index agar overlay berada di bawah gambar saat belum dihover */
+  z-index: 0;
+}
+
+/* Mengatur tampilan saat elemen dihover */
+.projects-item:hover .projects-img-overlay {
+  /* Memunculkan teks saat dihover */
+  opacity: 1;
+  /* Memutar overlay saat dihover */
+  transform: rotateY(180deg);
+  /* Menjadikan overlay berada di atas gambar saat dihover */
+  z-index: 1;
+}
+
+/* Mengatur teks agar tetap terbaca dengan benar */
+.projects-img-overlay .card-content {
+  /* Memutar teks sebesar -180 derajat agar tetap terbaca dengan benar */
+  transform: rotateY(180deg);
 }
 
 .projects-img:before {
@@ -781,24 +858,13 @@ h3.my-proffession {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang hitam samar-samar */
+  background-color: rgba(0, 0, 0, 0.87); /* Warna latar belakang hitam samar-samar */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
 .projects-item-inner:hover .projects-img:before {
   opacity: 1;
-}
-
-.projects-img:hover::after {
-  content: attr(data-text); /* Menampilkan teks yang diberikan melalui atribut data-text */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 18px;
-  text-align: center;
 }
 
 .img-link {
