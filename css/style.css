@@ -1070,6 +1070,24 @@ form .row .contact-form .btn {
     justify-content: center;
     align-items: center;
   }
+
+  .card-content {
+    padding: 20px;
+    text-align: center;
+    transform: scaleX(-1);
+  }
+  
+  .card-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    transform: scaleX(-1);
+  }
+  
+  .card-content p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    transform: scaleX(-1);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1096,5 +1114,23 @@ form .row .contact-form .btn {
     align-items: center;
     margin-bottom: 3rem;
     border-radius: 10px;
+  }
+
+  .card-content {
+    padding: 20px;
+    text-align: center;
+    transform: scaleX(-1);
+  }
+  
+  .card-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    transform: scaleX(-1);
+  }
+  
+  .card-content p {
+    font-size: 10px;
+    margin-bottom: 20px;
+    transform: scaleX(-1);
   }
 }
