@@ -96,7 +96,7 @@
               </div>
             </div>
             <div class="about-img">
-              <img src="img/ammar-bg-black.jpg" alt="">
+              <img src="img/ammar-bg-black.jpg" alt="" />
             </div>
             <div class="row">
               <div class="about-content padd-15">
@@ -208,16 +208,27 @@
                           <!-- Timeline Items -->
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
-                            <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2023</h3>
-                            <h4 class="timeline-title">Dicoding : Memulai Pemrograman Dengan Haskell</h4>
-                            <p class="timeline-text"><a href="img/Haskell.jpg">Lihat Sertifikat</a></p>
+                            <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2021</h3>
+                            <h4 class="timeline-title">Lomba Esai Battra Festival</h4>
+                            <p class="timeline-text"><a href="img/battra.jpg" target="_blank">Lihat Sertifikat</a></p>
+                          </div>
+                          <!-- Timeline Items -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2022</h3>
+                            <h4 class="timeline-title">Prisma Science Competition</h4>
+                            <p class="timeline-text"><a href="img/prisma.jpg" target="_blank">Lihat Sertifikat</a></p>
                           </div>
                           <!-- Timeline Items -->
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2023</h3>
                             <h4 class="timeline-title">Dicoding : Belajar Dasar Pemrograman JavaScript</h4>
-                            <p class="timeline-text"><a href="img/Javascript.jpg">Lihat Sertifikat</a></p>
+                            <p class="timeline-text"><a href="img/Javascript.jpg" target="_blank">Lihat Sertifikat</a></p>
+                          </div>
+                          <div class="timeline-item">
+                            <h4 class="timeline-title">Dicoding : Memulai Pemrograman Dengan Haskell</h4>
+                            <p class="timeline-text"><a href="img/Haskell.jpg" target="_blank">Lihat Sertifikat</a></p>
                           </div>
                         </div>
                       </div>
@@ -292,7 +303,7 @@
               <!-- Projects Item Start -->
               <div class="projects-item padd-15">
                 <div class="projects-item-inner shadow-dark">
-                  <div class="projects-img" id="project1" data-text="Project Berkelompok">
+                  <div class="projects-img" id="project1" data-text="Tugas Kelompok">
                     <img src="img/project1.png.jpg" alt="projects1" />
                   </div>
                 </div>
@@ -305,24 +316,12 @@
               <!-- Projects Item Start -->
               <div class="projects-item padd-15">
                 <div class="projects-item-inner shadow-dark">
-                  <div class="projects-img" id="project2" data-text="Project Portofolio">
-                    <img src="img/project2.jpg" alt="Projects2" />
+                  <div class="projects-img" id="project2" data-text="My Chat Bot">
+                    <img src="img/chatbot.jpg" alt="Projects2" />
                   </div>
                 </div>
                 <div class="img-link">
-                  <a href="https://github.com/ahmadammarm/ammar" target="_blank">Github</a>
-                </div>
-              </div>
-              <!-- Projects Item End -->
-              <!-- Projects Item Start -->
-              <div class="projects-item padd-15">
-                <div class="projects-item-inner shadow-dark">
-                  <div class="projects-img" id="project3" data-text="Project Github">
-                    <img src="img/project3.jpg" alt="Projects3" />
-                  </div>
-                </div>
-                <div class="img-link">
-                  <a href="https://github.com/ahmadammarm?tab=repositories" target="_blank">Github</a>
+                  <a href="https://github.com/ahmadammarm/my-chat-bot" target="_blank">Github</a>
                 </div>
               </div>
               <!-- Projects Item End -->
@@ -460,26 +459,26 @@
       }
 
       function hideLoadingScreenAndShowHome() {
-    const loadingScreen = document.getElementById("loadingScreen");
-    const mainContainer = document.querySelector(".main-container");
+        const loadingScreen = document.getElementById("loadingScreen");
+        const mainContainer = document.querySelector(".main-container");
 
-    // Menghilangkan loading screen
-    loadingScreen.style.display = "none";
+        // Menghilangkan loading screen
+        loadingScreen.style.display = "none";
 
-    // Menampilkan bagian Home dengan menghapus class "active" dari bagian lain
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((section) => section.classList.remove("active"));
-    document.getElementById("home").classList.add("active");
+        // Menampilkan bagian Home dengan menghapus class "active" dari bagian lain
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => section.classList.remove("active"));
+        document.getElementById("home").classList.add("active");
 
-    // Mengaktifkan konten utama
-    mainContainer.style.display = "block";
-  }
+        // Mengaktifkan konten utama
+        mainContainer.style.display = "block";
+      }
 
-  // Menunggu konten website selesai dimuat
-  window.addEventListener("load", function () {
-    // Setelah 2 detik, panggil fungsi hideLoadingScreenAndShowHome untuk menghilangkan loading dan menampilkan bagian Home
-    setTimeout(hideLoadingScreenAndShowHome, 5000);
-  });
+      // Menunggu konten website selesai dimuat
+      window.addEventListener("load", function () {
+        // Setelah 2 detik, panggil fungsi hideLoadingScreenAndShowHome untuk menghilangkan loading dan menampilkan bagian Home
+        setTimeout(hideLoadingScreenAndShowHome, 5000);
+      });
     </script>
   </body>
 </html>
