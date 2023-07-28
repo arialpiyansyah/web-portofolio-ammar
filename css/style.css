@@ -1010,8 +1010,9 @@ form .row .contact-form .btn {
   border: 5px solid var(--bg-dark-variant);
   border-top: 5px solid var(--skin-color);
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
+
 
 @keyframes spin {
   0% {
