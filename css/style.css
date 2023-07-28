@@ -249,7 +249,7 @@ ul {
 }
 
 .aside .nav {
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .aside .nav li {
@@ -272,6 +272,12 @@ ul {
 
 .aside .nav li a i {
   margin-right: 15px;
+}
+
+.aside .nav p {
+  color: var(--skin-color);
+  margin-left: 10px;
+  margin-top: 100px;
 }
 
 /* Home CSS */
@@ -613,6 +619,9 @@ h3.my-proffession {
   left: 7px;
   top: 0;
   background-color: var(--skin-color);
+}
+.about .about-content .certificates .timeline .timeline-item::before {
+  display: none;
 }
 
 .about .about-content .timeline .circle-dot {
