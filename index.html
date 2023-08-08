@@ -350,7 +350,7 @@
             <h3 class="contact-title padd-15">SEND ME A MESSAGE OR SUGGESTION</h3>
             <h4 class="contact-sub-title padd-15">I'm very responsive to reply</h4>
             <!-- Contact Form Start -->
-            <form name="submit-to-google-sheet" onsubmit="handleSubmit(event)">
+            <form name="submit-to-google-sheet">
               <div class="row">
                 <div class="contact-form padd-15">
                   <div class="row">
@@ -405,6 +405,31 @@
     </div>
     <!-- Theme Switcher End  -->
 
+    <!-- Sweet Alert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Sweet Alert -->
+    <script>
+      // Function to handle form submission
+      document.querySelector('form[name="submit-to-google-sheet"]').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        // Simulate successful form submission (Replace this with your actual submission logic)
+        // For example, you can use AJAX to send form data to a server.
+        // After successful submission, show SweetAlert success message
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Pesan Anda Berhasil Terkirim !',
+          showConfirmButton: false,
+          timer: 2000  // Auto-close the alert after 2 seconds
+        });
+        
+        // Reset the form fields after submission (optional)
+        this.reset();
+      });
+    </script>
+
     <!-- JavaScript -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"
@@ -420,22 +445,6 @@
       const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczflI3qVDorrRt3egys1dGRolltGTEX6xI5XdumXT7CQdFqiAvA/exec";
       const form = document.forms["submit-to-google-sheet"];
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            console.log("Success!", response);
-            // Menampilkan alert setelah pengiriman berhasil
-            alert("Pesan telah terkirim");
-            // Mereset inputan
-            form.reset();
-          })
-          .catch((error) => {
-            console.error("Error!", error.message);
-            // Menampilkan alert jika terjadi kesalahan
-            alert("Terjadi kesalahan saat mengirim pesan");
-          });
-      });
 
       // Fungsi untuk menghilangkan loading setelah 2 detik
       function hideLoadingScreen() {
