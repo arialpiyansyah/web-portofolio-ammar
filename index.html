@@ -422,8 +422,10 @@
       const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczflI3qVDorrRt3egys1dGRolltGTEX6xI5XdumXT7CQdFqiAvA/exec";
       const form = document.forms["submit-to-google-sheet"];
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = document.forms["submit-to-google-sheet"];
+
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             console.log("Success!", response);
@@ -447,7 +449,7 @@
               text: "Terjadi kesalahan saat mengirim pesan",
             });
           });
-      });
+      }
 
       // Fungsi untuk menghilangkan loading setelah 2 detik
       function hideLoadingScreen() {
