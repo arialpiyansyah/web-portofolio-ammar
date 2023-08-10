@@ -362,19 +362,19 @@
                   <div class="row">
                     <div class="form-item col-6 padd-15">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" autocomplete="off" required />
+                        <input type="text" name="name" class="form-control" placeholder="Name" id="name" autocomplete="off" />
                       </div>
                     </div>
                     <div class="form-item col-6 padd-15">
                       <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" autocomplete="off" required />
+                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" autocomplete="off" />
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-item col-12 padd-15">
                       <div class="form-group">
-                        <textarea name="pesan" class="form-control" id="message" placeholder="Message or Suggestion" autocomplete="off" required></textarea>
+                        <textarea name="pesan" class="form-control" id="message" placeholder="Message or Suggestion" autocomplete="off"></textarea>
                       </div>
                     </div>
                   </div>
@@ -432,6 +432,19 @@
       function handleSubmit(event) {
         event.preventDefault();
         const form = document.forms["submit-to-google-sheet"];
+        const nameInput = form.elements["name"];
+        const emailInput = form.elements["email"];
+        const messageInput = form.elements["pesan"];
+
+        if (!nameInput.value || !emailInput.value || !messageInput.value) {
+          // Menampilkan SweetAlert jika terjadi kesalahan input
+          Swal.fire({
+            icon: "error",
+            title: "Kesalahan",
+            text: "Harap lengkapi semua kolom sebelum mengirim pesan",
+          });
+          return;
+        }
 
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
