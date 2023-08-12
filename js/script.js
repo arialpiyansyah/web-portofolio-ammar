@@ -124,3 +124,76 @@ function downloadCV() {
 
   xhr.send();
 }
+
+const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczflI3qVDorrRt3egys1dGRolltGTEX6xI5XdumXT7CQdFqiAvA/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = document.forms["submit-to-google-sheet"];
+        const nameInput = form.elements["name"];
+        const emailInput = form.elements["email"];
+        const messageInput = form.elements["pesan"];
+
+        if (!nameInput.value || !emailInput.value || !messageInput.value) {
+          // Menampilkan SweetAlert jika terjadi kesalahan input
+          Swal.fire({
+            icon: "error",
+            title: "Kesalahan",
+            text: "Harap lengkapi semua kolom sebelum mengirim pesan",
+          });
+          return;
+        }
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            // Menampilkan SweetAlert setelah pengiriman berhasil
+            Swal.fire({
+              icon: "success",
+              title: "Berhasil",
+              text: "Pesan telah terkirim",
+              showConfirmButton: false,
+              timer: 2000, // Menutup otomatis pesan setelah 2 detik
+            });
+            // Mereset inputan
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            // Menampilkan SweetAlert jika terjadi kesalahan
+            Swal.fire({
+              icon: "error",
+              title: "Kesalahan",
+              text: "Terjadi kesalahan saat mengirim pesan",
+            });
+          });
+      }
+
+      // Fungsi untuk menghilangkan loading setelah 2 detik
+      function hideLoadingScreen() {
+        const loadingScreen = document.querySelector(".loading-screen");
+        loadingScreen.style.display = "none";
+      }
+
+      function hideLoadingScreenAndShowHome() {
+        const loadingScreen = document.getElementById("loadingScreen");
+        const mainContainer = document.querySelector(".main-container");
+
+        // Menghilangkan loading screen
+        loadingScreen.style.display = "none";
+
+        // Menampilkan bagian Home dengan menghapus class "active" dari bagian lain
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => section.classList.remove("active"));
+        document.getElementById("home").classList.add("active");
+
+        // Mengaktifkan konten utama
+        mainContainer.style.display = "block";
+      }
+
+      // Menunggu konten website selesai dimuat
+      window.addEventListener("load", function () {
+        // Setelah 2 detik, panggil fungsi hideLoadingScreenAndShowHome untuk menghilangkan loading dan menampilkan bagian Home
+        setTimeout(hideLoadingScreenAndShowHome, 5000);
+      });
