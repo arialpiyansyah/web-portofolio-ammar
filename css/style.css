@@ -843,6 +843,10 @@ h3.my-proffession {
   transition: all 0.2s ease;
 }
 
+.projects .projects-item-inner .projects-describe .projects-btn a i {
+  margin-right: 6px;
+}
+
 .projects .projects-item-inner .projects-describe .projects-btn a:hover {
   color: var(--skin-color);
   background-color: #1f1f1f;
