@@ -768,11 +768,13 @@ h3.my-proffession {
 }
 
 .projects .projects-item-inner {
-  border: 2px solid var(--skin-color);
+  border: 1px solid var(--skin-color);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  box-shadow: 0px 0px 8px var(--skin-color);
+  background: #1f1f1f;
 }
 
 
@@ -806,6 +808,7 @@ h3.my-proffession {
   transition: opacity 0.3s ease-in-out;
 }
 
+
 .projects .projects-item-inner .projects-describe .projects-title {
   display: flex;
   align-items: center;
@@ -818,7 +821,7 @@ h3.my-proffession {
 }
 
 .projects .projects-item-inner .projects-describe .projects-text {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--bg-black-100);
   cursor: default;
@@ -842,7 +845,7 @@ h3.my-proffession {
 
 .projects .projects-item-inner .projects-describe .projects-btn a:hover {
   color: var(--skin-color);
-  background: #111111;
+  background-color: #1f1f1f;
   border: 1px solid var(--skin-color);
 }
 
