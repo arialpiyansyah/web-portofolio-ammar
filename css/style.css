@@ -849,7 +849,7 @@ h3.my-proffession {
   margin-right: 6px;
 }
 
-.projects .projects-item-inner .projects-describe .projects-btn a:active {
+.projects .projects-item-inner .projects-describe .projects-btn a:hover {
   opacity: 0.5;
 }
 
@@ -869,7 +869,7 @@ h3.my-proffession {
   margin-right: 6px;
 }
 
-.projects .projects-item-inner .projects-describe .projects-btn-view a:active {
+.projects .projects-item-inner .projects-describe .projects-btn-view a:hover {
   opacity: 0.5;
 }
 
