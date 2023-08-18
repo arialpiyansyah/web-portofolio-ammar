@@ -828,8 +828,10 @@ h3.my-proffession {
   margin: 11px; /* Menambahkan margin 10px di semua sisi */
 }
 
-.projects .projects-item-inner .projects-describe .projects-btn {
-  margin: 20px 20px 20px 15px;
+.projects .projects-item-inner .projects-describe .projects-btn,
+.projects .projects-item-inner .projects-describe .projects-btn-view {
+  margin: 10px 1px 20px 15px;
+  display: inline-block;
 }
 
 .projects .projects-item-inner .projects-describe .projects-btn a {
@@ -847,10 +849,28 @@ h3.my-proffession {
   margin-right: 6px;
 }
 
-.projects .projects-item-inner .projects-describe .projects-btn a:hover {
+.projects .projects-item-inner .projects-describe .projects-btn a:active {
+  opacity: 0.5;
+}
+
+.projects .projects-item-inner .projects-describe .projects-btn-view a {
+  font-size: 14px;
+  font-weight: 400;
+  background: #1f1f1f;
+  border-radius: 5px;
+  padding: 10px 20px;
   color: var(--skin-color);
-  background-color: #1f1f1f;
+  text-decoration: none;
+  transition: all 0.2s ease;
   border: 1px solid var(--skin-color);
+}
+
+.projects .projects-item-inner .projects-describe .projects-btn-view a i {
+  margin-right: 6px;
+}
+
+.projects .projects-item-inner .projects-describe .projects-btn-view a:active {
+  opacity: 0.5;
 }
 
 /* Contact CSS */
