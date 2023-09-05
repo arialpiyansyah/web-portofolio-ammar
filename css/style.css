@@ -1141,4 +1141,9 @@ form .row .contact-form .btn {
     margin-bottom: 20px;
     transform: scaleX(-1);
   }
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
 }
