@@ -24,6 +24,28 @@ body {
   box-sizing: border-box;
 }
 
+/* Tampilan Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scroll bar */
+}
+
+/* Warna latar belakang scroll bar */
+::-webkit-scrollbar-track {
+  background: #555;
+}
+
+/* Warna thumb (bagian yang dapat digerakkan) scroll bar */
+::-webkit-scrollbar-thumb {
+  background: var(--skin-color);
+  border-radius: 5px;
+  transition: all .5s ease;
+}
+
+/* Gaya animasi saat hover pada scroll bar */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
 ::before {
   box-sizing: border-box;
 }
