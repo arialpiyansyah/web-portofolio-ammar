@@ -197,3 +197,21 @@ const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczf
         // Setelah 2 detik, panggil fungsi hideLoadingScreenAndShowHome untuk menghilangkan loading dan menampilkan bagian Home
         setTimeout(hideLoadingScreenAndShowHome, 5000);
       });
+
+      // This function updates the URL when the page loads or when navigation occurs
+function updateURL() {
+  const currentURL = window.location.href;
+  const newURL = "https://ahmadammarm.github.io/ammar";
+
+  if (currentURL !== newURL) {
+    history.pushState(null, null, newURL);
+  }
+}
+
+// Call the function to update the URL when the page loads
+updateURL();
+
+// Add an event listener for the "popstate" event to handle the back and forward buttons
+window.addEventListener("popstate", function () {
+  updateURL();
+});
