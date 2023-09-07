@@ -410,6 +410,11 @@ h3.my-proffession {
   margin: auto;
   border-radius: 10px;
   height: 350px;
+  transition: all .5s ease;
+}
+
+.home .home-img img:hover {
+  transform: scale(0.9);
 }
 
 /* Mengatur tampilan Social Links */
