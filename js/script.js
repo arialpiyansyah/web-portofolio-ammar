@@ -198,7 +198,26 @@ const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczf
         setTimeout(hideLoadingScreenAndShowHome, 5000);
       });
 
-// Add an event listener for the "popstate" event to handle the back and forward buttons
-window.addEventListener("popstate", function () {
-  updateURL();
-});
+      document.addEventListener('DOMContentLoaded', function() {
+        const image1 = document.querySelector('.image-1');
+        const image2 = document.querySelector('.image-2');
+      
+        let showImage2 = false;
+      
+        function toggleImages() {
+          if (showImage2) {
+            image1.style.opacity = '0';
+            image2.style.opacity = '1';
+          } else {
+            image1.style.opacity = '1';
+            image2.style.opacity = '0';
+          }
+      
+          showImage2 = !showImage2;
+        }
+      
+        setInterval(toggleImages, 4000);
+      });
+      
+      
+
