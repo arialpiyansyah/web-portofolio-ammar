@@ -956,6 +956,7 @@ h3.my-proffession {
 }
 
 /* Popup Projects CSS */
+
 .popup {
   display: none;
   position: fixed;
@@ -1880,6 +1881,17 @@ form .row .contact-form .btn {
   ::-webkit-scrollbar-thumb {
     display: none;
   }
+  .popup,
+  .popup2,
+  .popup3,
+  .popup4,
+  .popup5,
+  .popup6,
+  .popup7 {
+    position: fixed;
+    padding-top: 6rem;
+  }
+
 
 }
 
