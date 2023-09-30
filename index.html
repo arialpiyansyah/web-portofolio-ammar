@@ -267,7 +267,7 @@
                     </div>
                     <p>Website landing page toko kopi sederhana yang menggunakan HTML...</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>                    
                     <div class="projects-btn">
                       <a href="https://ahmadammarm.github.io/lets-coffee-landing-page/" target="_blank"><i class="fa-regular fa-eye"></i>Demo</a>
@@ -295,7 +295,7 @@
                     </div>
                     <p>Website peminatan jurusan yang menggunakan framework seperti...</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup2()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>
                     <div class="projects-btn">
                       <a href="https://ptn-connect.site" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
@@ -322,7 +322,7 @@
                     </div>
                     <p>Website portofolio pribadi sederhana yang menggunakan....</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup3()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>                
                     <div class="projects-btn">
                       <a href="https://ahmadammarm.github.io/ammar" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
@@ -350,7 +350,7 @@
                     </div>
                     <p>Website game edukasi sederhana yang menggunakan....</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup4()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>
                     <div class="projects-btn">
                       <a href="https://ahmadammarm.github.io/game-kemerdekaan" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
@@ -377,7 +377,7 @@
                     </div>
                     <p>Website tim PKM Eclipse Glow Hair dengan menggunakan...</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup5()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>
                     <div class="projects-btn">
                       <a href="https://ahmadammarm.github.io/eclipse-glow" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
@@ -405,14 +405,14 @@
                     </div>
                     <p>Website to do list sederhana dengan menggunakan....</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup6()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>
                     <div class="projects-btn">
                       <a href="https://react-to-do-list-a.vercel.app" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
                     </div>                  
                   </div>
                 </div>
-              </div>
+              </div>         
               <!-- Projects Item End -->
               <!-- Projects Item Start -->
               <div class="projects-item padd-15">
@@ -432,7 +432,7 @@
                     </div>
                     <p>Website jadwal pertandingan sepak bola terbaru dengan menggunakan...</p>
                     <div class="projects-btn-view">
-                      <p><i class="fas fa-arrow-right"></i>Details</p>
+                      <p onclick="openPopup7()"><i class="fas fa-arrow-right"></i>Details</p>
                     </div>
                     <div class="projects-btn">
                       <a href="https://footballive-website.vercel.app" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
@@ -441,9 +441,133 @@
                 </div>
               </div>
               <!-- Projects Item End -->
+              <!-- Popup Projects Start -->
+              <div id="popup" class="popup">
+                <div class="popup-content">
+                  <span class="close-popup" onclick="closePopup()">&times;</span>
+                  <h2 class="popup-title">Lets Coffee</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools">
+                    <span><img src="img/html-removebg-preview.png" alt="">HTML</span>
+                    <span><img src="img/css-icon-removebg-preview.png" alt="">CSS</span>
+                    <span><img src="img/javascript.png" alt="">Javascript</span>
+                  </div>
+                  <div class="popup-description">Website landing page toko kopi sederhana yang menggunakan HTML, CSS, dan Javascript. Website ini dirancang dengan responsifitas sehingga dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo">
+                    <div class="popup-demo-inner">
+                      <a href="https://ahmadammarm.github.io/lets-coffee-landing-page" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup2" class="popup2">
+                <div class="popup-content2">
+                  <span class="close-popup2" onclick="closePopup2()">&times;</span>
+                  <h2 class="popup-title2">PTN Connect</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools2">
+                    <span><img src="img/1200px-Laravel.svg.png" alt=""> Laravel 10</span>
+                      <span><img src="img/bootstrap-removebg-preview.png" alt="">Bootstrap 5</span>
+                      <span><img src="img/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png" alt="">MySQL</span>
+                      <span><img src="img/node-js.png" alt="">NodeJs</span>
+                  </div>
+                  <div class="popup-description2">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo2">
+                    <div class="popup-demo-inner2">
+                      <a href="https://ptn-connect.site" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup3" class="popup3">
+                <div class="popup-content3">
+                  <span class="close-popup3" onclick="closePopup3()">&times;</span>
+                  <h2 class="popup-title3">Portfolio</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools3">
+                    <span><img src="img/html-removebg-preview.png" alt="">HTML</span>
+                    <span><img src="img/css-icon-removebg-preview.png" alt="">CSS</span>
+                    <span><img src="img/javascript.png" alt="">Javascript</span>
+                  </div>
+                  <div class="popup-description3">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo3">
+                    <div class="popup-demo-inner3">
+                      <a href="https://ahmadammarm.github.io/ammar" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup4" class="popup4">
+                <div class="popup-content4">
+                  <span class="close-popup4" onclick="closePopup4()">&times;</span>
+                  <h2 class="popup-title4">Inden Games</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools4">
+                    <span><img src="img/html-removebg-preview.png" alt="">HTML</span>
+                    <span><img src="img/css-icon-removebg-preview.png" alt="">CSS</span>
+                    <span><img src="img/javascript.png" alt="">Javascript</span>
+                    <span><img src="img/bootstrap-removebg-preview.png" alt="">Bootstrap 5</span>
+                  </div>
+                  <div class="popup-description4">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo4">
+                    <div class="popup-demo-inner4">
+                      <a href="https://ahmadammarm.github.io/game-kemerdekaan" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup5" class="popup5">
+                <div class="popup-content5">
+                  <span class="close-popup5" onclick="closePopup5()">&times;</span>
+                  <h2 class="popup-title5">Eclipse Glow</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools5">
+                    <span><img src="img/html-removebg-preview.png" alt="">HTML</span>
+                    <span><img src="img/css-icon-removebg-preview.png" alt="">CSS</span>
+                    <span><img src="img/javascript.png" alt="">Javascript</span>
+                  </div>
+                  <div class="popup-description5">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo5">
+                    <div class="popup-demo-inner5">
+                      <a href="https://ahmadammarm.github.io/eclipse-glow" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup6" class="popup6">
+                <div class="popup-content6">
+                  <span class="close-popup6" onclick="closePopup6()">&times;</span>
+                  <h2 class="popup-title6">To Do List</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools6"><span><img src="img/282599.webp" alt="">ReactJs</span>
+                    <span><img src="img/html-removebg-preview.png" alt="">HTML</span>
+                    <span><img src="img/css-icon-removebg-preview.png" alt="">CSS</span>
+                    <span><img src="img/javascript.png" alt="">Javascript</span>
+                  </div>
+                  <div class="popup-description6">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo6">
+                    <div class="popup-demo-inner6">
+                      <a href="https://react-to-do-list-a.vercel.app" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div id="popup7" class="popup7">
+                <div class="popup-content7">
+                  <span class="close-popup7" onclick="closePopup7()">&times;</span>
+                  <h2 class="popup-title7">Footballive</h2> <!-- Tambahkan judul di sini -->
+                  <div class="popup-tools7">
+                    <span><img src="img/next-js-icon-512x512-zuauazrk.png" alt="">NextJs</span>
+                      <span><img src="img/tailwind.png" alt="">TailwindCSS</span>
+                      <span><img src="img/5968381.png" alt="">Typescript</span>
+                  </div>
+                  <div class="popup-description7">Website to do list sederhana ini dibangun dengan menggunakan ReactJs Library untuk mengelola komponen, HTML untuk struktur dasar, CSS untuk desain dan tata letak, serta Javascript untuk fungsionalitas interaktif. Desain responsif memastikan bahwa website ini dapat diakses dengan baik baik pada laptop maupun handphone.</div>
+                  <div class="popup-demo7">
+                    <div class="popup-demo-inner7">
+                      <a href="https://footballive-website.vercel.app" target="_blank"><i class="fa-regular fa-eye"></i></i>Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Popup Projects End -->
             </div>
           </div>
         </section>
+        
         <!-- Projects End -->
         <!-- Contact Start -->
         <section class="contact section" id="contact">
