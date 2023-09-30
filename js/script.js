@@ -218,6 +218,88 @@ const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczf
       
         setInterval(toggleImages, 4000);
       });
+    
+      function openPopup() {
+        document.querySelector('.popup-title').textContent;
+        document.querySelector('.popup-description').textContent;
+        document.querySelector('.popup-tools').innerHTML;
+        document.querySelector('.popup-demo').innerHTML;
+        document.querySelector('.popup').style.display = 'block';
+      }
       
-      
+      function closePopup() {
+        document.querySelector('.popup').style.display = 'none';
+      }
 
+      function openPopup2() {
+        document.querySelector('.popup-title2').textContent;
+        document.querySelector('.popup-description2').textContent;
+        document.querySelector('.popup-tools2').innerHTML;
+        document.querySelector('.popup-demo2').innerHTML;
+        document.querySelector('.popup2').style.display = 'block';
+      }
+      
+      function closePopup2() {
+        document.querySelector('.popup2').style.display = 'none';
+      }
+
+      function openPopup3() {
+        document.querySelector('.popup-title3').textContent;
+        document.querySelector('.popup-description3').textContent;
+        document.querySelector('.popup-tools3').innerHTML;
+        document.querySelector('.popup-demo3').innerHTML;
+        document.querySelector('.popup3').style.display = 'block';
+      }
+      
+      function closePopup3() {
+        document.querySelector('.popup3').style.display = 'none';
+      }
+
+      function openPopup4() {
+        document.querySelector('.popup-title4').textContent;
+        document.querySelector('.popup-description4').textContent;
+        document.querySelector('.popup-tools4').innerHTML;
+        document.querySelector('.popup-demo4').innerHTML;
+        document.querySelector('.popup4').style.display = 'block';
+      }
+      
+      function closePopup4() {
+        document.querySelector('.popup4').style.display = 'none';
+      }
+
+      function openPopup5() {
+        document.querySelector('.popup-title5').textContent;
+        document.querySelector('.popup-description5').textContent;
+        document.querySelector('.popup-tools5').innerHTML;
+        document.querySelector('.popup-demo5').innerHTML;
+        document.querySelector('.popup5').style.display = 'block';
+      }
+      
+      function closePopup5() {
+        document.querySelector('.popup5').style.display = 'none';
+      }
+
+      function openPopup6() {
+        document.querySelector('.popup-title6').textContent;
+        document.querySelector('.popup-description6').textContent;
+        document.querySelector('.popup-tools6').innerHTML;
+        document.querySelector('.popup-demo6').innerHTML;
+        document.querySelector('.popup6').style.display = 'block';
+      }
+      
+      function closePopup6() {
+        document.querySelector('.popup6').style.display = 'none';
+      }
+
+      function openPopup7() {
+        document.querySelector('.popup-title7').textContent;
+        document.querySelector('.popup-description7').textContent;
+        document.querySelector('.popup-tools7').innerHTML;
+        document.querySelector('.popup-demo7').innerHTML;
+        document.querySelector('.popup7').style.display = 'block';
+      }
+      
+      function closePopup7() {
+        document.querySelector('.popup7').style.display = 'none';
+      }
+      
