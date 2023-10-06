@@ -8,8 +8,6 @@
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
   --text-grey: #c0c0c0;
-  --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
-  --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 body {
@@ -1628,6 +1626,102 @@ h3.my-proffession {
 .popup-demo-inner7 a i {
   margin-right: 6px;
 }
+/* Popup Projects CSS */
+.popup8 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content8 {
+  background: #1f1f1f;
+  max-width: 600px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-popup8 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--skin-color);
+}
+
+.popup-title8 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--skin-color);
+}
+
+.popup-description8 {
+  margin-bottom: 10px;
+  color: #c0c0c0;
+}
+
+.popup-tools8 {
+  margin-bottom: 10px;
+  color: #c0c0c0;
+}
+
+.popup-tools8 img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.popup-tools8 span {
+  color: var(--skin-color);
+  background-color: #141414;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex; /* Mengubah ke inline-flex */
+  align-items: center; /* Menyelaraskan konten secara vertikal */
+  margin-bottom: 10px;
+  margin-left: 7px;
+  border: 1px solid var(--skin-color);
+  border-radius: 10px;
+  padding: 5px; /* Mengubah nilai padding untuk memberikan lebih banyak ruang */
+  cursor: default;
+}
+
+.popup-demo8 {
+  margin-bottom: 10px;
+}
+
+.popup-demo-inner8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-demo-inner8 a {
+  color: #fff;
+  background-color: var(--skin-color);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.popup-demo-inner8 a:hover {
+  opacity: 0.5;
+}
+
+.popup-demo-inner8 a i {
+  margin-right: 6px;
+}
 
 
 /* Contact CSS */
@@ -1887,9 +1981,10 @@ form .row .contact-form .btn {
   .popup4,
   .popup5,
   .popup6,
-  .popup7 {
+  .popup7,
+  .popup8 {
     position: fixed;
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
 
