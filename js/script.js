@@ -302,4 +302,15 @@ const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczf
       function closePopup7() {
         document.querySelector('.popup7').style.display = 'none';
       }
+
+      function openPopup8() {
+        document.querySelector('.popup-title8').textContent;
+        document.querySelector('.popup-description8').textContent;
+        document.querySelector('.popup-tools8').innerHTML;
+        document.querySelector('.popup-demo8').innerHTML;
+        document.querySelector('.popup8').style.display = 'block';
+      }
       
+      function closePopup8() {
+        document.querySelector('.popup8').style.display = 'none';
+      }
