@@ -314,3 +314,15 @@ const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczf
       function closePopup8() {
         document.querySelector('.popup8').style.display = 'none';
       }
+
+      function openPopup9() {
+        document.querySelector('.popup-title9').textContent;
+        document.querySelector('.popup-description9').textContent;
+        document.querySelector('.popup-tools9').innerHTML;
+        document.querySelector('.popup-demo9').innerHTML;
+        document.querySelector('.popup9').style.display = 'block';
+      }
+      
+      function closePopup9() {
+        document.querySelector('.popup9').style.display = 'none';
+      }
