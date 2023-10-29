@@ -101,28 +101,13 @@ function submitForm() {
 
 // Download CV
 function downloadCV() {
-  var downloadLink = document.getElementById("downloadLink");
-  var downloadUrl = downloadLink.getAttribute("href");
-  var fileName = downloadUrl.split('/').pop(); // Ambil nama file dari URL
-
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', downloadUrl, true);
-  xhr.responseType = 'blob';
-
-  xhr.onload = function () {
-      if (xhr.status === 200) {
-          // Buat elemen anchor untuk memulai unduhan
-          var a = document.createElement('a');
-          a.href = window.URL.createObjectURL(xhr.response);
-          a.download = fileName;
-          a.style.display = 'none';
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(a.href);
-      }
-  };
-
-  xhr.send();
+  var link = document.createElement('a');
+  link.href = 'assets/CV-Ahmad-Ammar.pdf';
+  link.download = 'CV-Ahmad-Ammar.pdf';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 const scriptURL = "https://script.google.com/macros/s/AKfycby-TIGP5hd3qZDQkAWczflI3qVDorrRt3egys1dGRolltGTEX6xI5XdumXT7CQdFqiAvA/exec";
